@@ -1,0 +1,26 @@
+{
+  "colore": {
+    "ossidiana": "#0B0D10",
+    "carbone": "#11151A",
+    "grafite": "#171C22",
+    "acciaio": "#262D35",
+    "nebbia": "#98A3AE",
+    "carta": "#F4F7FA",
+    "lime-segnale": "#D8FF46",
+    "menta-recupero": "#79EFBD",
+    "corallo-allerta": "#FF8585",
+    "ambra-avviso": "#FFC861"
+  },
+  "spaziatura": [4,8,12,16,20,24,32,40,48,64,80,96],
+  "raggio": [8,10,12,14,18,24,32],
+  "contenitore": 1180,
+  "tipografia": {
+    "titoli": "Inter Display ExtraBold",
+    "interfaccia": "Inter",
+    "display": {"dimensione":72,"interlinea":0.96,"peso":800},
+    "titolo-1": {"dimensione":48,"interlinea":1.0,"peso":800},
+    "titolo-2": {"dimensione":32,"interlinea":1.05,"peso":800},
+    "corpo": {"dimensione":16,"interlinea":1.5,"peso":400},
+    "etichetta": {"dimensione":12,"interlinea":1.2,"peso":800}
+  }
+}

@@ -1,0 +1,22 @@
+:root {
+  --chiudi-ossidiana: #0B0D10;
+  --chiudi-carbone: #11151A;
+  --chiudi-grafite: #171C22;
+  --chiudi-acciaio: #262D35;
+  --chiudi-nebbia: #98A3AE;
+  --chiudi-carta: #F4F7FA;
+  --chiudi-lime-segnale: #D8FF46;
+  --chiudi-menta-recupero: #79EFBD;
+  --chiudi-corallo-allerta: #FF8585;
+  --chiudi-ambra-avviso: #FFC861;
+  --chiudi-raggio-sm: 10px;
+  --chiudi-raggio-md: 14px;
+  --chiudi-raggio-lg: 18px;
+  --chiudi-raggio-xl: 24px;
+  --chiudi-spazio-1: 8px;
+  --chiudi-spazio-2: 16px;
+  --chiudi-spazio-3: 24px;
+  --chiudi-spazio-4: 32px;
+  --chiudi-spazio-5: 48px;
+  --chiudi-contenitore: 1180px;
+}
