@@ -1,0 +1,10 @@
+{
+  "name": "chiudi",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "npx wrangler@latest dev",
+    "deploy": "npx wrangler@latest deploy",
+    "check": "python3 scripts/check.py"
+  }
+}

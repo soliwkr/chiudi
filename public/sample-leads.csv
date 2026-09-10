@@ -1,0 +1,4 @@
+nome;lavoro;valore;data_preventivo;prossimo_followup;contatto;base_di_contatto;stato;note
+Marco Bianchi;Serramenti PVC;7800;2026-08-28;2026-09-10;+39 333 000 1122;Verificata;Da riaprire;Sopralluogo fatto
+Sara Conti;Climatizzazione 4 split;4200;2026-09-02;2026-09-10;sara@example.test;Verificata;Follow-up;Chiesto slot prima di ottobre
+Luca Romano;Impianto fotovoltaico;11200;2026-08-17;2026-09-12;;Da verificare;Da riaprire;Nessuna risposta dopo il preventivo

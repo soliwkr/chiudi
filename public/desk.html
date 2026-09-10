@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CHIUDI. — Recovery Desk</title>
+  <meta name="theme-color" content="#090b0e">
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body class="desk-body">
+  <main class="desk-shell">
+    <div class="desk-top">
+      <div><a class="brand" href="/">CHIUDI<span class="dot">.</span></a> <span class="muted">Recovery Desk</span></div>
+      <div class="actions">
+        <button class="btn small ghost" id="resetDemo">Ripristina demo</button>
+        <button class="btn small" id="exportCsv">Esporta CSV</button>
+        <button class="btn small primary" id="importBtn">Importa CSV</button>
+        <input class="file-input" id="csvInput" type="file" accept=".csv,text/csv">
+      </div>
+    </div>
+
+    <div class="notice"><strong>Demo locale:</strong> dati e modifiche restano nel browser. Nessun messaggio viene inviato automaticamente.</div>
+
+    <section class="kpis">
+      <div class="kpi"><small>Valore aperto</small><strong id="kPipeline">€0</strong></div>
+      <div class="kpi"><small>Pratiche attive</small><strong id="kActive">0</strong></div>
+      <div class="kpi"><small>Da contattare</small><strong id="kDue">0</strong></div>
+      <div class="kpi"><small>Caldi</small><strong id="kHot">0</strong></div>
+      <div class="kpi"><small>Vinti</small><strong id="kWon">€0</strong></div>
+    </section>
+
+    <section class="card">
+      <div class="toolbar">
+        <div class="toolbar-left"><strong>Preventivi</strong><span class="muted" id="rowCount"></span></div>
+        <div class="toolbar-right">
+          <select id="statusFilter" class="search" style="min-width:150px">
+            <option value="">Tutti gli stati</option>
+            <option>Da riaprire</option><option>Follow-up</option><option>Caldo</option><option>Vinto</option><option>Perso</option>
+          </select>
+          <input class="search" id="search" placeholder="Cerca cliente, lavoro, nota…">
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Cliente</th><th>Lavoro</th><th>Valore</th><th>Età</th><th>Prossimo passo</th><th>Contatto</th><th>Stato</th><th></th></tr></thead>
+          <tbody id="rows"></tbody>
+        </table>
+      </div>
+      <div class="empty" id="empty" hidden>Nessuna pratica corrisponde ai filtri.</div>
+    </section>
+  </main>
+
+  <div class="modal-backdrop" id="backdrop"></div>
+  <aside class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer-head">
+      <div><strong id="leadName">Cliente</strong><div class="muted" id="leadMeta"></div></div>
+      <button class="btn small" id="closeDrawer">Chiudi</button>
+    </div>
+    <div class="drawer-body">
+      <div class="drawer-grid">
+        <div class="field"><label>Stato</label><select id="leadStatus"><option>Da riaprire</option><option>Follow-up</option><option>Caldo</option><option>Vinto</option><option>Perso</option></select></div>
+        <div class="field"><label>Base di contatto</label><select id="leadConsent"><option>Verificata</option><option>Da verificare</option><option>Non contattare</option></select></div>
+        <div class="field"><label>Prossimo follow-up</label><input id="leadNext" type="date"></div>
+        <div class="field"><label>Telefono / email</label><input id="leadContact" type="text" placeholder="Facoltativo"></div>
+      </div>
+      <div class="field"><label>Note commerciali</label><textarea id="leadNotes"></textarea></div>
+
+      <div style="margin:20px 0 10px"><strong>Sequenza suggerita</strong><div class="muted" style="font-size:12px">Adatta sempre tono e contenuto al contesto reale.</div></div>
+      <div id="touches"></div>
+
+      <div class="inline">
+        <button class="btn primary" id="saveLead">Salva</button>
+        <button class="btn" id="markHot">Segna caldo</button>
+        <button class="btn" id="markWon">Segna vinto</button>
+      </div>
+    </div>
+  </aside>
+
+  <script src="/assets/desk.js"></script>
+</body>
+</html>
